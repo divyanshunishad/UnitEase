@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit Converter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1 style="text-align: left;">UnitConverter</h1>
+  </nav>
+  <main class="maincontent">
+    <h1>Unit Converter</h1>
+  
+    <div class="mainconverter">
+      <label for="category">Select category:</label>
+      <select id="category" onchange="changeCategory()">
+        <option value="length">Length</option>
+        <option value="time">Time</option>
+        <option value="temperature">Temperature</option>
+        <option value="volume">Volume</option>
+        <option value="area">Area</option>
+        <option value="weight">Weight</option>
+      </select>
+    </div>
+  
+    <div class="converter" id="lengthConverter">
+      <label for="lengthInput">Enter length:</label>
+      <input type="number" id="lengthInput">
+      <select id="lengthUnit">
+        <option value="m">Meter</option>
+        <option value="cm">Centimeter</option>
+        <option value="in">Inch</option>
+        <option value="ft">Foot</option>
+      </select>
+      <button onclick="convertLength()">Convert</button>
+    </div>
+  
+    <div class="converter" id="timeConverter" style="display: none;">
+      <label for="timeInput">Enter time:</label>
+      <input type="number" id="timeInput">
+      <select id="timeUnit">
+        <option value="s">Second</option>
+        <option value="min">Minute</option>
+        <option value="hr">Hour</option>
+        <option value="day">Day</option>
+      </select>
+      <button onclick="convertTime()">Convert</button>
+    </div>
+  
+    <div class="converter" id="temperatureConverter" style="display: none;">
+      <label for="temperatureInput">Enter temperature:</label>
+      <input type="number" id="temperatureInput">
+      <select id="temperatureUnit">
+        <option value="c">Celsius</option>
+        <option value="f">Fahrenheit</option>
+        <option value="k">Kelvin</option>
+      </select>
+      <button onclick="convertTemperature()">Convert</button>
+    </div>
+  
+    <div class="converter" id="volumeConverter" style="display: none;">
+      <label for="volumeInput">Enter volume:</label>
+      <input type="number" id="volumeInput">
+      <select id="volumeUnit">
+        <option value="l">Liter</option>
+        <option value="ml">Milliliter</option>
+        <option value="gal">Gallon</option>
+        <option value="oz">Ounce</option>
+      </select>
+      <button onclick="convertVolume()">Convert</button>
+    </div>
+  
+    <div class="converter" id="areaConverter" style="display: none;">
+      <label for="areaInput">Enter area:</label>
+      <input type="number" id="areaInput">
+      <select id="areaUnit">
+        <option value="sqm">Square Meter</option>
+        <option value="sqft">Square Foot</option>
+        <option value="sqmi">Square Mile</option>
+        <option value="acre">Acre</option>
+      </select>
+      <button onclick="convertArea()">Convert</button>
+    </div>
+  
+    <div class="converter" id="weightConverter" style="display: none;">
+      <label for="weightInput">Enter weight:</label>
+      <input type="number" id="weightInput">
+      <select id="weightUnit">
+        <option value="kg">Kilogram</option>
+        <option value="g">Gram</option>
+        <option value="lb">Pound</option>
+        <option value="oz">Ounce</option>
+      </select>
+      <button onclick="convertWeight()">Convert</button>
+    </div>
+    <h1>Result</h1>
+    <div id="result"></div>
+  
+    <script src="script.js"></script>
+  </main >
+</body>
+
+</html>
